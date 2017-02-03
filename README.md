@@ -26,9 +26,15 @@ dependencies {
 ```
     
 ##Usage
+####Permission
+Need below permissions in AndroidManifest.xml
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+```
 
 ####Initialize
-First you have to call initialize method as below as follows
+Next you have to call initialize method as below as follows
 ```java
 SyncMarket.Initialize(this);
 ```
