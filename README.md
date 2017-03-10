@@ -1,5 +1,6 @@
 # SyncMarket
-You can manage your application's version update or get your market information more simply.
+You can manage your application's version update or get your market information more simply.<br>
+This Library used [Jsoup](https://jsoup.org/).
 
 ![kakaotalk_20170202_213907914](https://cloud.githubusercontent.com/assets/24237865/22550481/9fd478da-e993-11e6-9ca5-cfcff0e2dd26.jpg)
 
@@ -84,6 +85,12 @@ SyncMarket.gotoMarket(); // intent your application's Google Play Store Page
 ```
 ```java
 SyncMarket.isNetworkAvailable(); // check is network is available? 
+```
+####Proguard rules for release
+```java
+-keep public class org.jsoup.** {
+	public *;
+}
 ```
 
 #License
