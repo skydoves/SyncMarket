@@ -5,8 +5,8 @@ This Library used [Jsoup](https://jsoup.org/).
 ![kakaotalk_20170202_213907914](https://cloud.githubusercontent.com/assets/24237865/22550481/9fd478da-e993-11e6-9ca5-cfcff0e2dd26.jpg)
 
  
-##Including in your project
-####build.gradle
+## Including in your project
+#### build.gradle
 ```java
 repositories {
   mavenCentral() // or jcenter() works as well
@@ -17,7 +17,7 @@ dependencies {
 }
 ```
 
-####or Maven
+#### or Maven
 ```xml
 <dependency>
   <groupId>com.skydoves.syncmarket</groupId>
@@ -26,21 +26,21 @@ dependencies {
 </dependency>
 ```
     
-##Usage
-####Permission
+## Usage
+#### Permission
 Need below permissions in AndroidManifest.xml
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 
-####Initialize
+#### Initialize
 Next you have to call initialize method as below as follows
 ```java
 SyncMarket.Initialize(this);
 ```
 
-####Useage
+#### Useage
 and then use like this
 ```java
 SyncMarket.getMarketVersion() 
@@ -48,13 +48,13 @@ SyncMarket.getMarketVersion()
 
 That's it!
 
-####Note
+#### Note
 If you call "get...()" Method, then return your published app's information from Google Play Store.<br>
 From : **https://play.google.com/store/apps/details?id= + (packageName)**
 
 If your application is not published yet or not connected internet, then return **null**.
 
-####Method list
+#### Method list
 ```java
 SyncMarket.getMarketVersion(); // get the last published version from Google Play Store
 ```
@@ -86,14 +86,14 @@ SyncMarket.gotoMarket(); // intent your application's Google Play Store Page
 ```java
 SyncMarket.isNetworkAvailable(); // check is network is available? 
 ```
-####Proguard rules for release
+#### Proguard rules for release
 ```java
 -keep public class org.jsoup.** {
 	public *;
 }
 ```
 
-#License
+# License
 ```xml
 Copyright 2017 skydoves
 
