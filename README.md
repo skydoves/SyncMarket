@@ -71,7 +71,7 @@ SyncMarket.getDownloadsObservable(); // emit require minimum device api level fr
 SyncMarket.getPublishedDateObservable(); // emit the last published date from Google Play Store
 ```
 ```java
-SyncMarket.getMarketUrl(); // get url application's url
+SyncMarket.getMarketUrl(); // get application's google playstore url
 ```
 ```java
 SyncMarket.gotoMarket(); // intent your application's Google Play Store Page
