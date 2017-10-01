@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.skydoves.syncmarket:syncmarket:1.0.3'
+  compile 'com.skydoves.syncmarket:syncmarket:1.0.6'
 }
 ```
 
@@ -22,7 +22,7 @@ dependencies {
 <dependency>
   <groupId>com.skydoves.syncmarket</groupId>
   <artifactId>syncmarket</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.6</version>
 </dependency>
 ```
     
@@ -37,45 +37,38 @@ Need below permissions in AndroidManifest.xml
 #### Initialize
 Next you have to call initialize method as below as follows
 ```java
-SyncMarket.Initialize(this);
+SyncMarket.init(this);
 ```
 
 #### Useage
-and then use like this
+and then use like this using rx
 ```java
-SyncMarket.getMarketVersion() 
+TextView tv_ver = (TextView)findViewById(R.id.tv_ver);
+SyncMarket.getVersionObservable()
+	  .subscribe(ver -> tv_ver.setText(ver));
 ```
-
-That's it!
 
 #### Note
 If you call "get...()" Method, then return your published app's information from Google Play Store.<br>
 From : **https://play.google.com/store/apps/details?id= + (packageName)**
 
-If your application is not published yet or not connected internet, then return **null**.
+If your application is not published yet or not connected internet, then return string **none** or do nothing.
 
 #### Method list
 ```java
-SyncMarket.getMarketVersion(); // get the last published version from Google Play Store
-```
-
-```java
-SyncMarket.isVersionEqual(); // check is this application version equal the last published version?
+SyncMarket.getVersionObservable(); // emit the last published version from Google Play Store
 ```
 ```java
-SyncMarket.getMarketDownloads(); // get downloads range from Google Play Store
+SyncMarket.getDownloadsObservable(); // emit downloads range from Google Play Store
 ```
 ```java
-SyncMarket.getMarketRecentChange(); // get recent change list from Google Play Store
+SyncMarket.getRecentChangesObservable(); // emit the last published date from Google Play Store as string array
 ```
 ```java
-SyncMarket.getMarketRecentChangeArray(); // get the last published date from Google Play Store as string array
+SyncMarket.getDownloadsObservable(); // emit require minimum device api level from Google Play Store
 ```
 ```java
-SyncMarket.getMarketOperatingSystems(); // get require minimum device api level from Google Play Store
-```
-```java
-SyncMarket.getMarketPublishedDate(); // get the last published date from Google Play Store
+SyncMarket.getPublishedDateObservable(); // emit the last published date from Google Play Store
 ```
 ```java
 SyncMarket.getMarketUrl(); // get url application's url
