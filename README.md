@@ -79,6 +79,14 @@ SyncMarket.gotoMarket(); // intent your application's Google Play Store Page
 ```java
 SyncMarket.isNetworkAvailable(); // check is network is available? 
 ```
+```java
+// you don't have to call this method if you called init method. but you can set and testing.
+SyncMarket.setPackageName(String s); 
+```
+```java
+SyncMarket.setTimeout(); // you can set networking timeout.
+```
+
 #### Proguard rules for release
 ```java
 -keep public class org.jsoup.** {
