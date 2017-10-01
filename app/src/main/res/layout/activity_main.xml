@@ -49,47 +49,152 @@
 
     </RelativeLayout>
 
-    <com.github.skydoves.ElasticButton
-        android:id="@+id/elasticbtn0"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="20dp"
-        app:button_backgroundColor="#30354b"
-        app:button_round="20"
-        app:button_scale="0.87"
-        app:button_duration="300"
-        app:button_labelText="App version"
-        app:button_labelStyle="bold"
-        app:button_labelSize="17" />
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_ver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="published version : "
+                android:textColor="#3d95c9"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_ver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/label_ver"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/label_pub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="published date : "
+                android:textColor="#3d95c9"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_pub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/label_pub"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/label_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="downloads : "
+                android:textColor="#3d95c9"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/label_down"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/label_oper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="os version : "
+                android:textColor="#3d95c9"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_oper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/label_oper"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/label_rec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="recent changes : "
+                android:textColor="#3d95c9"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_rec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/label_rec"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
 
     <com.github.skydoves.ElasticButton
-        android:id="@+id/elasticbtn1"
+        android:id="@+id/btn_market"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:button_backgroundColor="#30354b"
-        app:button_round="20"
-        app:button_scale="0.87"
-        app:button_duration="300"
-        app:button_labelText="Recent Change"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:button_duration="200"
+        app:button_labelColor="#ffffff"
+        app:button_scale="0.8"
         app:button_labelStyle="bold"
-        app:button_labelSize="17"/>
-
-    <com.github.skydoves.ElasticButton
-        android:id="@+id/elasticbtn2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="20dp"
-        app:button_backgroundColor="#30354b"
-        app:button_round="20"
-        app:button_scale="0.87"
-        app:button_duration="300"
-        app:button_labelText="Rate this App"
-        app:button_labelStyle="bold"
-        app:button_labelSize="17"/>
+        app:button_labelText="go to market"
+        app:button_labelSize="18"
+        app:button_backgroundColor="@color/btnColor"/>
 
 </LinearLayout>
