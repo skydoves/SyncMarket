@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.skydoves.syncmarket:syncmarket:1.0.6'
+  compile 'com.skydoves.syncmarket:syncmarket:1.0.7'
 }
 ```
 
