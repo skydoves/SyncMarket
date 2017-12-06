@@ -5,7 +5,7 @@ publish {
     userOrg = 'devmagician'
     groupId = 'com.skydoves.syncmarket'
     artifactId = 'syncmarket'
-    publishVersion = '1.0.6'
+    publishVersion = '1.0.7'
     desc = 'You can manage your application version update more simply.'
     website = 'https://github.com/skydoves/SyncMarket'
     issueTracker = "${website}/issues"

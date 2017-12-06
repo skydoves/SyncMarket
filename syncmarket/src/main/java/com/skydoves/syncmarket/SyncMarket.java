@@ -63,7 +63,8 @@ public class SyncMarket {
     }
 
     public static void gotoMarket() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" +packageName));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + packageName));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
     }
 
